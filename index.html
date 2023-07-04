@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Costo Total</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=|Montserrat|Bahnschrift|">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <h1>Calculadora de Costo Total</h1>
+    <h2>Productos y Servicios</h2>
+    <div class="productos">
+        <div class="prod" align="center">
+            <img src="imagenes/tradicional.jpg">
+            <input type="checkbox" id="producto1" value="15">
+            <label for="producto1">Dibujo Tradicional - USD$15</label>
+        </div>
+
+        <div class="prod" align="center">
+            <img src="imagenes/digital.png">
+            <input type="checkbox" id="producto2" value="20">
+            <label for="producto2">Dibujo Digital - USD$20</label>
+        </div>
+
+        <div class="prod" align="center">
+            <img src="imagenes/logos.jpg">
+            <input type="checkbox" id="producto3" value="80">
+            <label for="producto3">Diseño de logotipos - USD$80</label>
+        </div>
+
+        <div class="prod" align="center">
+            <img src="imagenes/modelaje.png">
+            <input type="checkbox" id="servicio1" value="120">
+            <label for="servicio1">Modelaje 3D - USD$120</label>
+        </div>
+
+        <div class="prod" align="center">
+            <img src="imagenes/serv.jpg">
+            <input type="checkbox" id="servicio2" value="20">
+            <label for="servicio2">Contratar por hora - USD$20</label>
+        </div>
+    </div>
+    <div align="center" class="precios">
+        <button onclick="calcularCostoTotal()">Calcular</button>
+        <h2>Costo Total: USD$ <span id="costoTotal">0</span></h2>
+        <br><br>
+        <button onclick="convertir()">Convertir a ARS</button>
+        <h2>Costo Total en ARS: $ <span id="costoARS">0</span></h2>
+    </div> 
+</body>
+
+</html>
