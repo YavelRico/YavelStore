@@ -1,11 +1,12 @@
-body{
+body {
     text-decoration: none;
     font-family: 'Montserrat';
 }
 
-button{
+button {
     color: white;
     background-color: black;
+    border-radius: 10px;
     margin: 10px;
     padding: 20px 50px;
     font-family: 'Montserrat';
@@ -13,12 +14,12 @@ button{
     transition: 0.5s;
 }
 
-button:hover{
+button:hover {
     transform: scale(1.05);
 }
 
 
-.productos{
+.productos {
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
     gap: 40px;
@@ -26,32 +27,66 @@ button:hover{
     margin: 5% 0px;
 }
 
-.prod img{
+.prod img {
     width: 200px;
     display: block;
     padding-bottom: 20px;
+    border-radius: 10px;
 }
 
-.prod{
+.prod {
     display: block;
     border: solid 2px black;
+    border-radius: 10px;
     padding: 50px 20px;
     margin: 0px 25%;
 
 }
 
-.precios h2{
+.precios h2 {
     text-decoration: none;
 }
 
-h1{
+.precios{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+h1 {
     text-align: center;
     border: black solid 2px;
+    border-radius: 10px;
     padding: 20px;
     margin: 40px 30%;
 }
 
-h2{
+h2 {
     text-align: center;
     text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .productos {
+        grid-template-columns: 100%;
+        margin: 5% auto;
+    }
+
+    .prod {
+        margin: 0 auto;
+        max-width: 250px;
+    }
+
+    h1{
+        font-size: 20px;
+        margin: 40px 10%;
+    }
+
+    h2{
+        font-size: 18px;
+    }
 }
