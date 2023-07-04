@@ -1,21 +1,28 @@
 body {
     text-decoration: none;
     font-family: 'Montserrat';
+    background: rgb(175, 25, 215);
+    background: linear-gradient(47deg, rgba(175, 25, 215, 1) 0%, rgba(19, 68, 161, 1) 67%, rgba(6, 136, 213, 1) 100%);
 }
 
 button {
-    color: white;
-    background-color: black;
+    color: #43f7fc;
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 10px;
+    border: solid #43f7fc 2px;
     margin: 10px;
     padding: 20px 50px;
     font-family: 'Montserrat';
+    font-weight: bold;
     font-size: 20px;
     transition: 0.5s;
 }
 
 button:hover {
     transform: scale(1.05);
+    background-color: #43f7fc;
+    color: #1e0f3e;
+    padding: 20px 80px;
 }
 
 
@@ -36,33 +43,36 @@ button:hover {
 
 .prod {
     display: block;
-    border: solid 2px black;
+    border: solid 2px #43f7fc;
     border-radius: 10px;
     padding: 50px 20px;
     margin: 0px 25%;
-
+    color: #43f7fc;
+    font-size: 18px;
 }
 
 .precios h2 {
     text-decoration: none;
 }
 
-.precios{
+.precios {
     margin-top: 50px;
     margin-bottom: 100px;
 }
 
 h1 {
     text-align: center;
-    border: black solid 2px;
+    border: #43f7fc solid 2px;
     border-radius: 10px;
     padding: 20px;
-    margin: 40px 30%;
+    margin: 60px 30%;
+    color: #43f7fc;
 }
 
 h2 {
     text-align: center;
     text-decoration: underline;
+    color: #ecc3f5;
 }
 
 @media (max-width: 767px) {
@@ -81,12 +91,12 @@ h2 {
         max-width: 250px;
     }
 
-    h1{
+    h1 {
         font-size: 20px;
         margin: 40px 10%;
     }
 
-    h2{
+    h2 {
         font-size: 18px;
     }
 }
