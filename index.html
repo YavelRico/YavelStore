@@ -16,41 +16,38 @@
     <div class="productos">
         <div class="prod" align="center">
             <img src="imagenes/tradicional.jpg">
-            <input type="checkbox" id="producto1" value="15">
+            <button onclick="addToCart('Dibujo Tradicional', 15)">Comprar</button>
             <label for="producto1">Dibujo Tradicional - USD$15</label>
         </div>
 
         <div class="prod" align="center">
             <img src="imagenes/digital.png">
-            <input type="checkbox" id="producto2" value="20">
+            <button onclick="addToCart('Dibujo Digital', 20)">Comprar</button>
             <label for="producto2">Dibujo Digital - USD$20</label>
         </div>
 
         <div class="prod" align="center">
             <img src="imagenes/logos.jpg">
-            <input type="checkbox" id="producto3" value="80">
+            <button onclick="addToCart('Diseño de logotipos', 80)">Comprar</button>
             <label for="producto3">Diseño de logotipos - USD$80</label>
         </div>
 
         <div class="prod" align="center">
             <img src="imagenes/modelaje.png">
-            <input type="checkbox" id="servicio1" value="120">
+            <button onclick="addToCart('Modelaje 3D', 120)">Comprar</button>
             <label for="servicio1">Modelaje 3D - USD$120</label>
         </div>
 
         <div class="prod" align="center">
             <img src="imagenes/serv.png">
-            <input type="checkbox" id="servicio2" value="20">
+            <button onclick="addToCart('Contratar por una hora', 20)">Comprar</button>
             <label for="servicio2">Contratar por hora - USD$20</label>
         </div>
     </div>
     <div align="center" class="precios">
-        <button onclick="calcularCostoTotal()">Calcular</button>
-        <h2>Costo Total: USD$ <span id="costoTotal">0</span></h2>
-        <br><br>
-        <button onclick="convertir()">Convertir a ARS</button>
-        <h2>Costo Total en ARS: $ <span id="costoARS">0</span></h2>
-    </div> 
+        <a href="secciones/checkout.html"><button>Ir al Checkout</button></a>
+    </div>
 </body>
 
 </html>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
