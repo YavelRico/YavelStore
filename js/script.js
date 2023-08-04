@@ -1,31 +1,3 @@
-function calcularCostoTotal() {
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    var costoTotal = 0;
-
-    for (var i = 0; i < checkboxes.length; i++) {
-        var checkbox = checkboxes[i];
-        if (checkbox.checked) {
-            costoTotal += parseInt(checkbox.value);
-        }
-    }
-
-    document.getElementById("costoTotal").innerText = costoTotal;
-}
-
-function convertir() {
-    var costoTotalUSD = parseInt(document.getElementById("costoTotal").innerText);
-    var tasaCambio = 500;
-
-    var costoTotalARS = convertirMoneda(costoTotalUSD, tasaCambio);
-
-    document.getElementById("costoARS").innerText = costoTotalARS;
-}
-
-function convertirMoneda(monto, tasa) {
-    return monto * tasa;
-}
-
-
 //Info de productos
 const productos = [
     {
@@ -60,30 +32,30 @@ const productos = [
     },
 ];
 
-// Mostrar alert con la información del producto ingresado por el usuario
-function mostrarInformacionProducto() {
-    const nombreProducto = prompt("Ingrese el nombre del producto deseado:");
+//Carrito
+function addToCart(productName, price) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    if (nombreProducto === null) {
-        alert("Ha cancelado la solicitud.");
-        return;
-    }
+    const existingProduct = cart.find((item) => item.name === productName);
 
-    const selectedProduct = productos.find(
-        producto => producto.nombre.toLowerCase() === nombreProducto.toLowerCase()
-    );
-
-    if (selectedProduct) {
-        const info = `ID: ${selectedProduct.id}\nNombre: ${selectedProduct.nombre}\nPrecio USD: $${selectedProduct.precioUSD}\nPrecio ARS: $${selectedProduct.precioARS}`;
-        alert(info);
+    if (existingProduct) {
+        existingProduct.quantity += 1;
     } else {
-        alert("Producto no encontrado o nombre inválido. Intente nuevamente.");
+        const newProduct = {
+            name: productName,
+            price: price,
+            quantity: 1,
+        };
+        cart.push(newProduct);
     }
-}
 
-// Llamar a la función para mostrar la información cuando se carga la página
-window.onload = function () {
-    setTimeout(function () {
-        mostrarInformacionProducto();
-    }, 500);
-};
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: '¡Producto agregado al carrito!',
+        showConfirmButton: false,
+        timer: 1500
+    })
+}
