@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Bahnschrift">
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <div class="carrito-estilo" align="center">
+        <h1>Carrito</h1>
+        <br><br><br>
+        <div id="carrito">
+
+        </div>
+        <div class="checkout1">
+            <label for="moneda">Selecciona la moneda:</label>
+            <select id="moneda" onchange="mostrarCarrito()">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="ARS">ARS</option>
+            </select>
+            <p>Total: <span id="total">$0</span></p>
+        </div>
+        <button onclick="finalizarCompra()">Finalizar compra</button>
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../js/carrito.js"></script>
