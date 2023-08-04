@@ -3,6 +3,7 @@ body {
     font-family: 'Montserrat';
     background: rgb(175, 25, 215);
     background: linear-gradient(47deg, rgba(175, 25, 215, 1) 0%, rgba(19, 68, 161, 1) 67%, rgba(6, 136, 213, 1) 100%);
+    color: #43f7fc;
 }
 
 button {
@@ -46,7 +47,7 @@ button:hover {
     border: solid 2px #43f7fc;
     border-radius: 10px;
     padding: 50px 20px;
-    margin: 0px 25%;
+    margin: 0px 20%;
     color: #43f7fc;
     font-size: 18px;
 }
@@ -99,4 +100,26 @@ h2 {
     h2 {
         font-size: 18px;
     }
+}
+
+/**CARRITO**/
+.carrito-estilo{
+    padding: 2% 20% 50% 20%;
+}
+
+.carrito-estilo #carrito{
+    font-size: 20px;
+}
+
+.checkout1{
+    font-size: 20px;
+}
+
+#moneda{
+    font-size: 15px;
+    background-color: rgba(19, 68, 161, 1);
+    color: #43f7fc;
+    border: #43f7fc solid 2px;
+    border-radius: 20px;
+    padding: 10px;
 }
