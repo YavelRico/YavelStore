@@ -43,7 +43,7 @@ function finalizarCompra() {
         title: '¡Compra Realizada con éxito! Carrito vaciado.',
         showConfirmButton: false,
         timer: 1500
-    })
+    });
     mostrarCarrito();
 }
 

@@ -1,0 +1,32 @@
+[
+    {
+        "id": "producto1",
+        "nombre": "Dibujo Tradicional",
+        "precioUSD": 15,
+        "precioARS": 7500,
+    },
+    {
+        "id": "producto2",
+        "nombre": "Dibujo Digital",
+        "precioUSD": 20,
+        "precioARS": 10000,
+    },
+    {
+        "id": "producto3",
+        "nombre": "Diseño de logotipos",
+        "precioUSD": 80,
+        "precioARS": 40000,
+    },
+    {
+        "id": "servicio1",
+        "nombre": "Modelaje 3D",
+        "precioUSD": 120,
+        "precioARS": 60000,
+    },
+    {
+        "id": "servicio2",
+        "nombre": "Contratar",
+        "precioUSD": 20,
+        "precioARS": 10000,
+    },
+]
