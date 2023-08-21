@@ -29,7 +29,7 @@ function obtenerTasaDeCambio(monedaSeleccionada) {
     } else if (monedaSeleccionada === "GBP") {
         return 0.79;
     } else if (monedaSeleccionada === "ARS") {
-        return 500;
+        return 730;
     } else {
         return 1;
     }
